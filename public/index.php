@@ -1,4 +1,5 @@
 <?php 
+    require("../vendor/autoload.php");
 
     //nos définitions de classes
     require("../app/Controllers/MainController.php");
@@ -16,6 +17,10 @@
             "controller" => "CategoryController"
         ]
     ];
+
+    //fonction fournie par le var-dumper de symfony
+    //dd($routes) pour faire un die() après le dump()
+    //dump($routes);
 
     //récupère l'URL demandée ( / par défaut)
     //_url provient du htaccess ! Ce paramètre contient l'URL réécrite
