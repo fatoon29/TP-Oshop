@@ -1,0 +1,119 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="670" height="299" view_box="0 0 670 299"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Fri, 29 Nov 2019 05:36:49</desc>
+
+<rect id="frame" x="0" y="0" width="670" height="299" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association is tagged as -->
+<line x1="377" y1="98" x2="230" y2="98" stroke="#5aae61" stroke-width="1"/>
+<text x="293" y="114.0" fill="#762a83" font-family="Courier New" font-size="12">1,1</text>
+<line x1="74" y1="98" x2="230" y2="98" stroke="#5aae61" stroke-width="1"/>
+<text x="144" y="114.0" fill="#762a83" font-family="Courier New" font-size="12">0,N</text>
+<g id="association-is tagged as">
+	<path d="M 274 72 a 14 14 90 0 1 14 14 V 98 h -116 V 86 a 14 14 90 0 1 14 -14" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+	<path d="M 288 98.0 v 12 a 14 14 90 0 1 -14 14 H 186 a 14 14 90 0 1 -14 -14 V 98.0 H 116" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+	<rect x="172" y="72" width="116" height="52" fill="none" rx="14" stroke="#5aae61" stroke-width="1.5"/>
+	<line x1="172" y1="98" x2="288" y2="98" stroke="#5aae61" stroke-width="1"/>
+	<text x="179" y="90.6" fill="#000000" font-family="Courier New" font-size="14">is tagged as</text>
+</g>
+
+<!-- Association made -->
+<line x1="377" y1="98" x2="491" y2="98" stroke="#5aae61" stroke-width="1"/>
+<text x="438" y="114.0" fill="#762a83" font-family="Courier New" font-size="12">1,1</text>
+<line x1="605" y1="98" x2="491" y2="98" stroke="#5aae61" stroke-width="1"/>
+<text x="521" y="114.0" fill="#762a83" font-family="Courier New" font-size="12">0,N</text>
+<g id="association-made">
+	<path d="M 502 72 a 14 14 90 0 1 14 14 V 98 h -50 V 86 a 14 14 90 0 1 14 -14" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+	<path d="M 516 98.0 v 12 a 14 14 90 0 1 -14 14 H 480 a 14 14 90 0 1 -14 -14 V 98.0 H 50" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+	<rect x="466" y="72" width="50" height="52" fill="none" rx="14" stroke="#5aae61" stroke-width="1.5"/>
+	<line x1="466" y1="98" x2="516" y2="98" stroke="#5aae61" stroke-width="1"/>
+	<text x="473" y="90.6" fill="#000000" font-family="Courier New" font-size="14">made</text>
+</g>
+
+<!-- Association is a -->
+<line x1="377" y1="98" x2="377" y2="237" stroke="#5aae61" stroke-width="1"/>
+<text x="382.0" y="203" fill="#762a83" font-family="Courier New" font-size="12">1,1</text>
+<line x1="230" y1="237" x2="377" y2="237" stroke="#5aae61" stroke-width="1"/>
+<text x="291" y="253.0" fill="#762a83" font-family="Courier New" font-size="12">0,N</text>
+<g id="association-is a">
+	<path d="M 388 211 a 14 14 90 0 1 14 14 V 237 h -50 V 225 a 14 14 90 0 1 14 -14" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+	<path d="M 402 237.0 v 12 a 14 14 90 0 1 -14 14 H 366 a 14 14 90 0 1 -14 -14 V 237.0 H 50" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+	<rect x="352" y="211" width="50" height="52" fill="none" rx="14" stroke="#5aae61" stroke-width="1.5"/>
+	<line x1="352" y1="237" x2="402" y2="237" stroke="#5aae61" stroke-width="1"/>
+	<text x="359" y="229.6" fill="#000000" font-family="Courier New" font-size="14">is a</text>
+</g>
+
+<!-- Entity CATEGORY -->
+<g id="entity-CATEGORY">
+	<g id="frame-CATEGORY">
+		<rect x="9" y="27" width="130" height="26" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+		<rect x="9" y="53.0" width="130" height="116" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+		<rect x="9" y="27" width="130" height="142" fill="none" stroke="#9970ab" stroke-width="1.5"/>
+		<line x1="9" y1="53" x2="139" y2="53" stroke="#9970ab" stroke-width="1"/>
+	</g>
+	<text x="40" y="45.6" fill="#000000" font-family="Courier New" font-size="14">CATEGORY</text>
+	<text x="14" y="71.6" fill="#000000" font-family="Courier New" font-size="14">category title</text>
+	<line x1="14" y1="74.0" x2="133" y2="74.0" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="89.6" fill="#000000" font-family="Courier New" font-size="14">subtitle</text>
+	<text x="14" y="107.6" fill="#000000" font-family="Courier New" font-size="14">picture</text>
+	<text x="14" y="125.6" fill="#000000" font-family="Courier New" font-size="14">home order</text>
+	<text x="14" y="143.6" fill="#000000" font-family="Courier New" font-size="14">created at</text>
+	<text x="14" y="161.6" fill="#000000" font-family="Courier New" font-size="14">updated at</text>
+</g>
+
+<!-- Entity PRODUCT -->
+<g id="entity-PRODUCT">
+	<g id="frame-PRODUCT">
+		<rect x="321" y="9" width="112" height="26" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+		<rect x="321" y="35.0" width="112" height="152" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+		<rect x="321" y="9" width="112" height="178" fill="none" stroke="#9970ab" stroke-width="1.5"/>
+		<line x1="321" y1="35" x2="433" y2="35" stroke="#9970ab" stroke-width="1"/>
+	</g>
+	<text x="347" y="27.6" fill="#000000" font-family="Courier New" font-size="14">PRODUCT</text>
+	<text x="326" y="53.6" fill="#000000" font-family="Courier New" font-size="14">product name</text>
+	<line x1="326" y1="56.0" x2="428" y2="56.0" stroke="#000000" stroke-width="1"/>
+	<text x="326" y="71.6" fill="#000000" font-family="Courier New" font-size="14">description</text>
+	<text x="326" y="89.6" fill="#000000" font-family="Courier New" font-size="14">picture</text>
+	<text x="326" y="107.6" fill="#000000" font-family="Courier New" font-size="14">price</text>
+	<text x="326" y="125.6" fill="#000000" font-family="Courier New" font-size="14">rate</text>
+	<text x="326" y="143.6" fill="#000000" font-family="Courier New" font-size="14">status</text>
+	<text x="326" y="161.6" fill="#000000" font-family="Courier New" font-size="14">created at</text>
+	<text x="326" y="179.6" fill="#000000" font-family="Courier New" font-size="14">updated at</text>
+</g>
+
+<!-- Entity TYPE -->
+<g id="entity-TYPE">
+	<g id="frame-TYPE">
+		<rect x="174" y="184" width="112" height="26" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+		<rect x="174" y="210.0" width="112" height="80" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+		<rect x="174" y="184" width="112" height="106" fill="none" stroke="#9970ab" stroke-width="1.5"/>
+		<line x1="174" y1="210" x2="286" y2="210" stroke="#9970ab" stroke-width="1"/>
+	</g>
+	<text x="212" y="202.6" fill="#000000" font-family="Courier New" font-size="14">TYPE</text>
+	<text x="179" y="228.6" fill="#000000" font-family="Courier New" font-size="14">type name</text>
+	<line x1="179" y1="231.0" x2="256" y2="231.0" stroke="#000000" stroke-width="1"/>
+	<text x="179" y="246.6" fill="#000000" font-family="Courier New" font-size="14">footer order</text>
+	<text x="179" y="264.6" fill="#000000" font-family="Courier New" font-size="14">created at</text>
+	<text x="179" y="282.6" fill="#000000" font-family="Courier New" font-size="14">updated at</text>
+</g>
+
+<!-- Entity BRAND -->
+<g id="entity-BRAND">
+	<g id="frame-BRAND">
+		<rect x="549" y="45" width="112" height="26" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+		<rect x="549" y="71.0" width="112" height="80" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+		<rect x="549" y="45" width="112" height="106" fill="none" stroke="#9970ab" stroke-width="1.5"/>
+		<line x1="549" y1="71" x2="661" y2="71" stroke="#9970ab" stroke-width="1"/>
+	</g>
+	<text x="583" y="63.6" fill="#000000" font-family="Courier New" font-size="14">BRAND</text>
+	<text x="554" y="89.6" fill="#000000" font-family="Courier New" font-size="14">brand name</text>
+	<line x1="554" y1="92.0" x2="639" y2="92.0" stroke="#000000" stroke-width="1"/>
+	<text x="554" y="107.6" fill="#000000" font-family="Courier New" font-size="14">footer order</text>
+	<text x="554" y="125.6" fill="#000000" font-family="Courier New" font-size="14">created at</text>
+	<text x="554" y="143.6" fill="#000000" font-family="Courier New" font-size="14">updated at</text>
+</g>
+</svg>
