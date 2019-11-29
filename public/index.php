@@ -1,4 +1,5 @@
 <?php 
+    //inclue toutes nos dépendances installées par composer
     require("../vendor/autoload.php");
 
     //nos définitions de classes
@@ -7,6 +8,9 @@
 
     //crée une instance de notre router open source
     $router = new AltoRouter();
+
+    //permet de voir toutes les méthodes contenues dans une classe
+    //dd(get_class_methods($router));
 
     //la partie de l'URL à ne pas prendre compte lorsqu'AltoRouter
     //essaye de trouver une route correspondant à l'URL
@@ -31,7 +35,8 @@
         //paramètre dynamique de notre url !! partie variable... on aura l'id de la catégorie ici 
         //le i indique que ça doit être un entier
         //le id => nom du paramètre
-        "/categorie/[i:id]/",         [
+        "/categorie/[i:id]/",         
+        [
             "method" => "productList",
             "controller" => "CatalogController"
         ],
@@ -39,8 +44,10 @@
     );
 
     //tente de trouver la correspondance entre l'URL et nos routes
+    //retourne un tableau s'il y a correspondance
+    //false sinon
     $match = $router->match();
-    dd($match);
+    dump($match);
 
     //fonction fournie par le var-dumper de symfony
     //dd($routes) pour faire un die() après le dump()
@@ -55,21 +62,24 @@
         $page = "/";
     }
 
-    if (!isset($routes[$page])){
+    //si altorouter n'a pas trouvé de correspondance entre l'URL actuelle
+    //et nos routes, $match est alors égal à false donc...
+    if ($match === false){
         //@todo: gérer la page 404 correctement
         die("404");
     }
     else {
         //quel contrôleur on doit instancier ?
-        $controllerToUse = $routes[$page]['controller'];
+        $controllerToUse = $match['target']['controller'];
         //quelle méthode on doit appeler dans ce contrôleur ? 
-        $methodToUse = $routes[$page]['method'];
+        $methodToUse = $match['target']['method'];
 
         //crée l'instance du contrôleur
         $controller = new $controllerToUse();
 
         //appelle la méthode associée à cette route
-        $controller->$methodToUse();
+        //on passe les éventuels paramètres d'URL à notre méthode de contrôleur
+        $controller->$methodToUse($match['params']);
         //ou
         //call_user_func([$controller, $methodToUse]);
     }

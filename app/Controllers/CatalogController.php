@@ -5,8 +5,15 @@ class CatalogController
     /**
      * Pour la page de tous les produits d'une catégorie
      */
-    public function productList()
+    public function productList($urlParams)
     {
+        //@todo: aller chercher en bdd la categorie à afficher
+        //ainsi que ses produits
+
+        //récupère l'id de la catégorie présent dans l'URL
+        $categoryId = $urlParams['id'];
+        dd($categoryId);
+
         $this->show('category_product_list');
     }
 
