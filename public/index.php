@@ -3,7 +3,7 @@
 
     //nos définitions de classes
     require("../app/Controllers/MainController.php");
-    require("../app/Controllers/CategoryController.php");
+    require("../app/Controllers/CatalogController.php");
 
     //nos routes (correspondances entre URLs et méthode de contrôleur)
     $routes = [
@@ -14,7 +14,7 @@
         ],
         "/categorie" => [
             "method" => "productList",
-            "controller" => "CategoryController"
+            "controller" => "CatalogController"
         ]
     ];
 

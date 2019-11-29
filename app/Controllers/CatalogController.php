@@ -1,6 +1,6 @@
 <?php 
 
-class CategoryController 
+class CatalogController 
 {
     /**
      * Pour la page de tous les produits d'une catégorie
