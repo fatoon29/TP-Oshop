@@ -5,18 +5,42 @@
     require("../app/Controllers/MainController.php");
     require("../app/Controllers/CatalogController.php");
 
-    //nos routes (correspondances entre URLs et méthode de contrôleur)
-    $routes = [
-        //route pour l'accueil
-        "/" => [
+    //crée une instance de notre router open source
+    $router = new AltoRouter();
+
+    //la partie de l'URL à ne pas prendre compte lorsqu'AltoRouter
+    //essaye de trouver une route correspondant à l'URL
+    // la valeur de $_SERVER['BASE_URI'] est donnée par le .htaccess. Elle correspond à la racine du site
+    $router->setBasePath($_SERVER["BASE_URI"]);
+
+    //prévient altorouter de l'existence de cette route
+    //route de la page d'accueil
+    $router->map(
+        "GET", //le ou les verbes http pour cette page
+        "/",  //l'url pour arriver sur cette page
+        //ce qui sera appelé :
+        [
             "method" => "home",
             "controller" => "MainController",
         ],
-        "/categorie" => [
+        "home" //nom unique pour cette route
+    );
+
+    $router->map(
+        "GET",
+        //paramètre dynamique de notre url !! partie variable... on aura l'id de la catégorie ici 
+        //le i indique que ça doit être un entier
+        //le id => nom du paramètre
+        "/categorie/[i:id]/",         [
             "method" => "productList",
             "controller" => "CatalogController"
-        ]
-    ];
+        ],
+        "catalog-category"
+    );
+
+    //tente de trouver la correspondance entre l'URL et nos routes
+    $match = $router->match();
+    dd($match);
 
     //fonction fournie par le var-dumper de symfony
     //dd($routes) pour faire un die() après le dump()
