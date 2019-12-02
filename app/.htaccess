@@ -1,0 +1,3 @@
+# on demande à Apache de bloquer complètement l'accès 
+# aux sous-répertoires et aux fichiers
+Deny From All

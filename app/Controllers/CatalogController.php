@@ -2,6 +2,7 @@
 
 class CatalogController 
 {
+
     /**
      * Pour la page de tous les produits d'une catégorie
      */
@@ -28,7 +29,19 @@ class CatalogController
     {
         $brandId = $urlParams['id'];
 
-        $this->show('brand_product_list');
+        //aller chercher tous les produits dans la bdd
+        //crée d'abord une instance de notre modèle just pour pouvoir...
+        $product = new Product();
+        //appeler la méthode findall qui s'y trouve
+        //retourne un tableau contenant une instance de Product pour 
+        //chaque ligne de la table
+        $allProducts = $product->findAll();
+
+        //on passe notre variable en 2e argument afin de la rendre disponible
+        //dans nos templates
+        $this->show('brand_product_list', [
+            "allProducts" => $allProducts
+        ]);
     }
 
     public function productDetails($urlParams)
@@ -40,8 +53,12 @@ class CatalogController
 
     /**
      * Affiche la vue ! 
+     * Le 2e argument est normalement un tableau
+     * Ce tableau permet de passer des variables, des données, en nombre illimité
+     * il est optionnel (= null)
+     * mais forcément un tableau (typage avec array)
      */
-    private function show(string $filename)
+    private function show(string $filename, array $viewParams = null)
     {
         require('../app/views/header.tpl.php');
         //interpolation de variable avec les ""

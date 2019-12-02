@@ -5,6 +5,9 @@
     //nos définitions de classes
     require("../app/Controllers/MainController.php");
     require("../app/Controllers/CatalogController.php");
+    require("../app/Models/Product.php");
+    require("../app/Models/Brand.php");
+    require("../app/Utils/Database.php");
 
     //crée une instance de notre router open source
     $router = new AltoRouter();
