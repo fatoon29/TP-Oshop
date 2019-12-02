@@ -17,6 +17,27 @@ class CatalogController
         $this->show('category_product_list');
     }
 
+    public function productsByType($urlParams)
+    {
+        $typeId = $urlParams['id'];
+
+        $this->show('type_product_list');
+    }
+
+    public function productsByBrand($urlParams)
+    {
+        $brandId = $urlParams['id'];
+
+        $this->show('brand_product_list');
+    }
+
+    public function productDetails($urlParams)
+    {
+        $productId = $urlParams['id'];
+
+        $this->show('product_details');
+    }
+
     /**
      * Affiche la vue ! 
      */

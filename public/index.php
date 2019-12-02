@@ -30,6 +30,18 @@
         "home" //nom unique pour cette route
     );
 
+    //page informations légales
+    $router->map(
+        "GET", //le ou les verbes http pour cette page
+        "/legal-mentions/",  //l'url pour arriver sur cette page
+        //ce qui sera appelé :
+        [
+            "method" => "legalMentions",
+            "controller" => "MainController",
+        ],
+        "legal-mentions" //nom unique pour cette route
+    );
+
     $router->map(
         "GET",
         //paramètre dynamique de notre url !! partie variable... on aura l'id de la catégorie ici 
@@ -42,6 +54,38 @@
         ],
         "catalog-category"
     );
+
+
+    $router->map(
+        "GET",
+        "/catalog/type/[i:id]/",
+        [
+            "method" => "productsByType",
+            "controller" => "CatalogController"
+        ],
+        "catalog-type"
+    );
+
+    $router->map(
+        "GET",
+        "/catalog/brand/[i:id]/",
+        [
+            "method" => "productsByBrand",
+            "controller" => "CatalogController"
+        ],
+        "catalog-brand"
+    );
+
+    $router->map(
+        "GET",
+        "/catalog/product/[i:id]/",
+        [
+            "method" => "productDetails",
+            "controller" => "CatalogController"
+        ],
+        "catalog-product-details"
+    );
+
 
     //tente de trouver la correspondance entre l'URL et nos routes
     //retourne un tableau s'il y a correspondance

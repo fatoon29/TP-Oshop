@@ -3,11 +3,19 @@
 class MainController 
 {
     /**
-     * Pour la page d'accueilx
+     * Pour la page d'accueil
      */
     public function home()
     {
         $this->show('home');
+    }
+
+    /**
+     * Mentions légales
+     */
+    public function legalMentions()
+    {
+        $this->show('legal_mentions');
     }
 
     /**
