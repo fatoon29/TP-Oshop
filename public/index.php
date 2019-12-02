@@ -35,9 +35,9 @@
         //paramètre dynamique de notre url !! partie variable... on aura l'id de la catégorie ici 
         //le i indique que ça doit être un entier
         //le id => nom du paramètre
-        "/categorie/[i:id]/",         
+        "/catalog/category/[i:id]/",         
         [
-            "method" => "productList",
+            "method" => "productsByCategory",
             "controller" => "CatalogController"
         ],
         "catalog-category"
