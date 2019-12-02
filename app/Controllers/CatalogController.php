@@ -5,16 +5,37 @@ class CatalogController
     /**
      * Pour la page de tous les produits d'une catégorie
      */
-    public function productList($urlParams)
+    public function productsByCategory($urlParams)
     {
         //@todo: aller chercher en bdd la categorie à afficher
         //ainsi que ses produits
 
         //récupère l'id de la catégorie présent dans l'URL
         $categoryId = $urlParams['id'];
-        dd($categoryId);
+        //dd($categoryId);
 
         $this->show('category_product_list');
+    }
+
+    public function productsByType($urlParams)
+    {
+        $typeId = $urlParams['id'];
+
+        $this->show('type_product_list');
+    }
+
+    public function productsByBrand($urlParams)
+    {
+        $brandId = $urlParams['id'];
+
+        $this->show('brand_product_list');
+    }
+
+    public function productDetails($urlParams)
+    {
+        $productId = $urlParams['id'];
+
+        $this->show('product_details');
     }
 
     /**

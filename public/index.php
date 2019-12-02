@@ -30,24 +30,68 @@
         "home" //nom unique pour cette route
     );
 
+    //page informations légales
+    $router->map(
+        "GET", //le ou les verbes http pour cette page
+        "/legal-mentions/",  //l'url pour arriver sur cette page
+        //ce qui sera appelé :
+        [
+            "method" => "legalMentions",
+            "controller" => "MainController",
+        ],
+        "legal-mentions" //nom unique pour cette route
+    );
+
     $router->map(
         "GET",
         //paramètre dynamique de notre url !! partie variable... on aura l'id de la catégorie ici 
         //le i indique que ça doit être un entier
         //le id => nom du paramètre
-        "/categorie/[i:id]/",         
+        "/catalog/category/[i:id]/",         
         [
-            "method" => "productList",
+            "method" => "productsByCategory",
             "controller" => "CatalogController"
         ],
         "catalog-category"
     );
 
+
+    $router->map(
+        "GET",
+        "/catalog/type/[i:id]/",
+        [
+            "method" => "productsByType",
+            "controller" => "CatalogController"
+        ],
+        "catalog-type"
+    );
+
+    $router->map(
+        "GET",
+        "/catalog/brand/[i:id]/",
+        [
+            "method" => "productsByBrand",
+            "controller" => "CatalogController"
+        ],
+        "catalog-brand"
+    );
+
+    $router->map(
+        "GET",
+        "/catalog/product/[i:id]/",
+        [
+            "method" => "productDetails",
+            "controller" => "CatalogController"
+        ],
+        "catalog-product-details"
+    );
+
+
     //tente de trouver la correspondance entre l'URL et nos routes
     //retourne un tableau s'il y a correspondance
     //false sinon
     $match = $router->match();
-    dump($match);
+    //dump($match);
 
     //fonction fournie par le var-dumper de symfony
     //dd($routes) pour faire un die() après le dump()
@@ -66,6 +110,7 @@
     //et nos routes, $match est alors égal à false donc...
     if ($match === false){
         //@todo: gérer la page 404 correctement
+        header('HTTP/1.0 404 Not Found');
         die("404");
     }
     else {

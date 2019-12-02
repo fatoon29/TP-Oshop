@@ -112,13 +112,13 @@
           <div class="col-md-6">
             <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-md-right">
               <li class="list-inline-item">
-                <img src="images/visa.svg" alt="..." class="payment-icon">
+                <img src="<?= $_SERVER["BASE_URI"] ?>/images/visa.svg" alt="..." class="payment-icon">
               </li>
               <li class="list-inline-item">
-                <img src="images/mastercard.svg" alt="..." class="payment-icon">
+                <img src="<?= $_SERVER["BASE_URI"] ?>/images/mastercard.svg" alt="..." class="payment-icon">
               </li>
               <li class="list-inline-item">
-                <img src="images/paypal.svg" alt="..." class="payment-icon">
+                <img src="<?= $_SERVER["BASE_URI"] ?>/images/paypal.svg" alt="..." class="payment-icon">
               </li>
             </ul>
           </div>
@@ -132,10 +132,10 @@
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace("HOST", location.hostname));
 //]]></script>
   <!-- JS -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="<?= $_SERVER["BASE_URI"] ?>/js/jquery.min.js"></script>
+  <script src="<?= $_SERVER["BASE_URI"] ?>/js/popper.min.js"></script>
+  <script src="<?= $_SERVER["BASE_URI"] ?>/js/bootstrap.min.js"></script>
+  <script src="<?= $_SERVER["BASE_URI"] ?>/js/app.js"></script>
 </body>
 
 </html>

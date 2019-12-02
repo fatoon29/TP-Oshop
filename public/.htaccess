@@ -1,6 +1,8 @@
 RewriteEngine On
 
 # dynamically setup base URI
+# sera utile pour 1. faire des liens fonctionnels vers nos assets 
+# et 2. aussi pour le routing avec altorouter
 RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
 RewriteRule ^(.*) - [E=BASE_URI:%1]
 
