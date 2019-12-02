@@ -91,7 +91,7 @@
     //retourne un tableau s'il y a correspondance
     //false sinon
     $match = $router->match();
-    dump($match);
+    //dump($match);
 
     //fonction fournie par le var-dumper de symfony
     //dd($routes) pour faire un die() après le dump()
@@ -110,6 +110,7 @@
     //et nos routes, $match est alors égal à false donc...
     if ($match === false){
         //@todo: gérer la page 404 correctement
+        header('HTTP/1.0 404 Not Found');
         die("404");
     }
     else {

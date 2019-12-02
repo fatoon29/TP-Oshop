@@ -4,9 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <?php 
+    // le $_SERVER["BASE_URI"] contient le chemin depuis la racine de l'URL
+    //jusqu'au dossier public/
+    //on le concaténe pour éviter les problèmes causés par la réécriture d'URL
+  ?>
+  <link rel="stylesheet" href="<?= $_SERVER["BASE_URI"] ?>/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?= $_SERVER["BASE_URI"] ?>/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?= $_SERVER["BASE_URI"] ?>/css/styles.css">
   <title>oShop</title>
 </head>
 
