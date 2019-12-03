@@ -61,6 +61,25 @@ class Product
         return $products;
     }
 
+    /** @todo à coder un de ces jours */
+    //retourne tous les produits en fonction d'un identifiant de catégorie
+    public function findAllByCategory($categoryId)
+    {
+
+    }
+
+    /** @todo à coder un de ces jours */
+    public function findAllByBrand($brandId)
+    {
+        
+    }
+
+    /** @todo à coder un de ces jours */
+    public function findAllByType($typeId)
+    {
+        
+    }
+
 
     /**
      * Get the value of id
