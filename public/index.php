@@ -5,8 +5,16 @@
     //nos définitions de classes
     require("../app/Controllers/MainController.php");
     require("../app/Controllers/CatalogController.php");
-    require("../app/Models/Product.php");
+
+    //on inclue d'abord la classe parente ! 
+    require("../app/Models/Model.php");
+
+    //nos modèles enfants
     require("../app/Models/Brand.php");
+    require("../app/Models/Product.php");
+    require("../app/Models/Type.php");
+    require("../app/Models/Category.php");
+
     require("../app/Utils/Database.php");
 
     //crée une instance de notre router open source
