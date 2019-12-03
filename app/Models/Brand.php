@@ -16,6 +16,26 @@ class Brand extends Model
 
 
     /**
+     * Récupère les 5 marques pour affichage dans le pied-de-page du site
+     */
+    public function findFooterBrands()
+    {
+        $pdo = Database::getPDO();
+
+        $sql = "SELECT * 
+                FROM brand
+                WHERE footer_order > 0 
+                ORDER BY footer_order ASC";
+        
+        $pdoStatement = $pdo->query($sql);
+        //on récupère un array de 5 instances de Brand
+        $brands = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Brand');
+
+        return $brands;
+    }
+
+
+    /**
      * Get the value of name
      */ 
     public function getName()

@@ -3,6 +3,10 @@
     require("../vendor/autoload.php");
 
     //nos définitions de classes
+    //notre contrôleur de base, la papa controleur
+    require("../app/Controllers/Controller.php");
+
+    //les enfants contrôleurs
     require("../app/Controllers/MainController.php");
     require("../app/Controllers/CatalogController.php");
 

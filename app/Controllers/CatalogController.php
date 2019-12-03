@@ -1,6 +1,6 @@
 <?php 
 
-class CatalogController 
+class CatalogController extends Controller
 {
 
     /**
@@ -51,18 +51,4 @@ class CatalogController
         $this->show('product_details');
     }
 
-    /**
-     * Affiche la vue ! 
-     * Le 2e argument est normalement un tableau
-     * Ce tableau permet de passer des variables, des données, en nombre illimité
-     * il est optionnel (= null)
-     * mais forcément un tableau (typage avec array)
-     */
-    private function show(string $filename, array $viewParams = null)
-    {
-        require('../app/views/header.tpl.php');
-        //interpolation de variable avec les ""
-        require("../app/views/$filename.tpl.php");
-        require('../app/views/footer.tpl.php');
-    }
 }
