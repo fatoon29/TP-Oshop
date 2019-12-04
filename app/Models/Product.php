@@ -25,6 +25,16 @@ class Product extends Model
     {
         $sql = "SELECT * FROM product 
                 WHERE id = $id";
+
+        // On pourrait utiliser les jointures mais cela nécessiterait
+        // un peu de travail en plus pour faire ça proprement en objet
+        // Mais ça reste possible, techniquement ça marche !
+
+        // $sql = "SELECT product.*, brand.name AS brand_name
+        //         FROM product
+        //         INNER JOIN brand
+        //         ON product.brand_id = brand.id 
+        //         WHERE product.id = $id";
         
         $pdo = Database::getPDO();
 

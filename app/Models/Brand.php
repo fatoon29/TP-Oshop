@@ -14,7 +14,6 @@ class Brand extends Model
     private $name;
     private $footer_order;
 
-
     /**
      * Récupère les 5 marques pour affichage dans le pied-de-page du site
      */
@@ -34,6 +33,22 @@ class Brand extends Model
         return $brands;
     }
 
+    /**
+     * Retourne un objet Brand
+     */
+    public function find($id)
+    {
+        $sql = "SELECT * FROM brand 
+                WHERE id = $id";
+        
+        $pdo = Database::getPDO();
+
+        $pdoStatement = $pdo->query($sql);
+
+        $brand = $pdoStatement->fetchObject('Brand');
+
+        return $brand;
+    }
 
     /**
      * Get the value of name

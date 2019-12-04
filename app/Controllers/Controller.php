@@ -22,6 +22,10 @@ class Controller
         $brandModel = new Brand();
         $brands = $brandModel->findFooterBrands();
 
+        //requête pour aller choper les types de produits à afficher dans le footer
+        $typeModel = new Type();
+        $types = $typeModel->findFooterTypes();
+ 
         require('../app/views/header.tpl.php');
         //interpolation de variable avec les ""
         require("../app/views/$filename.tpl.php");
