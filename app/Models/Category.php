@@ -87,4 +87,22 @@ class Category extends Model
 
         return $this;
     }
+
+    /**
+     * Retourne un objet catégorie
+     */
+    public function find($id)
+    {
+        $sql = "SELECT * FROM category 
+                WHERE id = $id";
+        
+        $pdo = Database::getPDO();
+
+        $pdoStatement = $pdo->query($sql);
+
+        $category = $pdoStatement->fetchObject('Category');
+
+        return $category;
+    }
+
 }
