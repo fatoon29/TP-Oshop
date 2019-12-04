@@ -1,5 +1,10 @@
 <?php 
 
+namespace oShop\Controllers;
+
+use oShop\Models\Brand;
+use oShop\Models\Product;
+
 class CatalogController extends Controller
 {
 

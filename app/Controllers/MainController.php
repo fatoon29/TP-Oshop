@@ -1,5 +1,7 @@
 <?php 
 
+namespace oShop\Controllers;
+
 class MainController extends Controller
 {
     /**

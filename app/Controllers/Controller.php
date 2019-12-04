@@ -1,5 +1,13 @@
 <?php 
 
+namespace oShop\Controllers;
+
+// On fait soit un new du FQCN directement
+// ou on passe par `use`
+// dans un fichier de classe, on privilégiera `use`
+use oShop\Models\Brand;
+use oShop\Models\Type;
+
 class Controller 
 {
 

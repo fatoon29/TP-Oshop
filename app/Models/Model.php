@@ -1,5 +1,7 @@
 <?php 
 
+namespace oShop\Models;
+
 /**
  * classe destinée à être la mère de tous nos modèles ! 
  * en d'autres mots, tous nos modèles actuels et futurs devraient hériter 

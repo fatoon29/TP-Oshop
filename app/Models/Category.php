@@ -1,5 +1,9 @@
 <?php 
 
+namespace oShop\Models;
+
+use oShop\Utils\Database;
+
 class Category extends Model
 {
 
@@ -100,7 +104,7 @@ class Category extends Model
 
         $pdoStatement = $pdo->query($sql);
 
-        $category = $pdoStatement->fetchObject('Category');
+        $category = $pdoStatement->fetchObject('oShop\Models\Category');
 
         return $category;
     }

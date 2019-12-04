@@ -2,25 +2,6 @@
     //inclue toutes nos dépendances installées par composer
     require("../vendor/autoload.php");
 
-    //nos définitions de classes
-    //notre contrôleur de base, la papa controleur
-    require("../app/Controllers/Controller.php");
-
-    //les enfants contrôleurs
-    require("../app/Controllers/MainController.php");
-    require("../app/Controllers/CatalogController.php");
-
-    //on inclue d'abord la classe parente ! 
-    require("../app/Models/Model.php");
-
-    //nos modèles enfants
-    require("../app/Models/Brand.php");
-    require("../app/Models/Product.php");
-    require("../app/Models/Type.php");
-    require("../app/Models/Category.php");
-
-    require("../app/Utils/Database.php");
-
     //crée une instance de notre router open source
     $router = new AltoRouter();
 
@@ -40,7 +21,7 @@
         //ce qui sera appelé :
         [
             "method" => "home",
-            "controller" => "MainController",
+            "controller" => "oShop\Controllers\MainController",
         ],
         "home" //nom unique pour cette route
     );
@@ -52,7 +33,7 @@
         //ce qui sera appelé :
         [
             "method" => "legalMentions",
-            "controller" => "MainController",
+            "controller" => "oShop\Controllers\MainController",
         ],
         "legal-mentions" //nom unique pour cette route
     );
@@ -65,7 +46,7 @@
         "/catalog/category/[i:id]/",         
         [
             "method" => "productsByCategory",
-            "controller" => "CatalogController"
+            "controller" => "oShop\Controllers\CatalogController"
         ],
         "catalog-category"
     );
@@ -76,7 +57,7 @@
         "/catalog/type/[i:id]/",
         [
             "method" => "productsByType",
-            "controller" => "CatalogController"
+            "controller" => "oShop\Controllers\CatalogController"
         ],
         "catalog-type"
     );
@@ -86,7 +67,7 @@
         "/catalog/brand/[i:id]/",
         [
             "method" => "productsByBrand",
-            "controller" => "CatalogController"
+            "controller" => "oShop\Controllers\CatalogController"
         ],
         "catalog-brand"
     );
@@ -96,7 +77,7 @@
         "/catalog/product/[i:id]/",
         [
             "method" => "productDetails",
-            "controller" => "CatalogController"
+            "controller" => "oShop\Controllers\CatalogController"
         ],
         "catalog-product-details"
     );
