@@ -31,6 +31,21 @@
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
               <i class="fa fa-star-o"></i>
+              <!-- Code de Vincent -->
+            <?php for ($i=0; $i<5; $i++) :?>
+              <i class="fa fa-star<?= $viewParams['product']->getRate() >= $i + 1  ? "" : "-o"?>"></i>
+            <?php endfor?>
+            <!-- Code de Florent -->
+            <?php
+            $stars = $viewParams['product']->getRate();
+            // dd($stars);
+            for ($i = 0; $i < $stars; $i++) : ?>
+                <i class="fa fa-star"></i>
+            <?php endfor; ?>
+            <?php for ($i = 0; $i < (5 - $stars); $i++) : ?>
+                <i class="fa fa-star-o"></i>
+            <?php endfor; ?>
+
             </div>
           </div>
           <div class="my-2">
