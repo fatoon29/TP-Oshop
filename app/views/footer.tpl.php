@@ -70,11 +70,17 @@
           <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
             <h6 class="text-uppercase text-dark mb-3">Produits</h6>
             <ul class="list-unstyled">
-              <li> <a href="#" class="text-muted">Chaussures de ville</a></li>
-              <li> <a href="#" class="text-muted">Chaussures de sport</a></li>
-              <li> <a href="#" class="text-muted">Pantoufles</a></li>
-              <li> <a href="#" class="text-muted">Tongs</a></li>
-              <li> <a href="#" class="text-muted">Chaussons</a></li>
+            <?php foreach($types as $type): ?>
+
+            <?php 
+              //génère l'url menant à la route ci-dessus
+              //on donne à altorouter la valeur de l'id à mettre dans l'url en 2e arg
+              $url = $router->generate("catalog-type", ["id" => $type->getId()]);
+            ?>
+            <!-- version avec altorouter -->
+            <li> <a href="<?= $url ?>" class="text-muted"><?= $type->getName() ?></a></li>
+
+            <?php endforeach; ?>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">

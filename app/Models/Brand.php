@@ -14,7 +14,6 @@ class Brand extends Model
     private $name;
     private $footer_order;
 
-
     /**
      * Récupère les 5 marques pour affichage dans le pied-de-page du site
      */
