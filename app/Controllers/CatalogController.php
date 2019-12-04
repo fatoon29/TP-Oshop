@@ -46,9 +46,15 @@ class CatalogController extends Controller
 
     public function productDetails($urlParams)
     {
+        //l'id du produit à afficher !
         $productId = $urlParams['id'];
 
-        $this->show('product_details');
+        //crée une instance pour pouvoir appeler la méthode
+        $productModel = new Product();
+        //récupère un produit en fonction de sa clé primaire
+        $product = $productModel->find($productId);
+
+        $this->show('product_details', ["product" => $product]);
     }
 
 }
