@@ -1,5 +1,8 @@
 <?php 
 
+namespace oShop\Models;
+
+use oShop\Utils\Database;
 
 /**
  * Cette classe représente les données pour les marques de chaussures
@@ -28,7 +31,7 @@ class Brand extends Model
         
         $pdoStatement = $pdo->query($sql);
         //on récupère un array de 5 instances de Brand
-        $brands = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Brand');
+        $brands = $pdoStatement->fetchAll(\PDO::FETCH_CLASS, 'oShop\Models\Brand');
 
         return $brands;
     }
@@ -45,7 +48,7 @@ class Brand extends Model
 
         $pdoStatement = $pdo->query($sql);
 
-        $brand = $pdoStatement->fetchObject('Brand');
+        $brand = $pdoStatement->fetchObject('oShop\Models\Brand');
 
         return $brand;
     }

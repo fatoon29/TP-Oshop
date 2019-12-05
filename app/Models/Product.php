@@ -1,5 +1,9 @@
 <?php 
 
+namespace oShop\Models;
+
+use oShop\Utils\Database;
+
 class Product extends Model
 {
     
@@ -41,7 +45,7 @@ class Product extends Model
         $pdoStatement = $pdo->query($sql);
 
         //retourne UNE instance de notre classe Product, avec les données de la bdd
-        $product = $pdoStatement->fetchObject('Product');
+        $product = $pdoStatement->fetchObject('oShop\Models\Product');
 
         return $product;
     }
@@ -62,7 +66,7 @@ class Product extends Model
         //exécute notre requête sql
         $pdoStatement = $pdo->query($sql);
         //renvoie les résultats directement sous forme d'objet Product !!!
-        $products = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Product');
+        $products = $pdoStatement->fetchAll(\PDO::FETCH_CLASS, 'oShop\Models\Product');
 
         //on sort les produits d'ici
         return $products;

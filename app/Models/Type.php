@@ -1,5 +1,9 @@
 <?php 
 
+namespace oShop\Models;
+
+use oShop\Utils\Database;
+
 class Type extends Model
 {
     private $name;
@@ -16,7 +20,7 @@ class Type extends Model
                 ORDER BY footer_order ASC";
 
         $pdoStatement = $pdo->query($sql);
-        $types = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Type');
+        $types = $pdoStatement->fetchAll(\PDO::FETCH_CLASS, 'oShop\Models\Type');
 
         return $types;
     }
